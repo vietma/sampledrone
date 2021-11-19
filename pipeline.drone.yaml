@@ -1,10 +1,14 @@
 ---
-- name: build
-  image: golang:1.13
-  commands:
-    - "go build -o ./myapp"
+kind: pipeline
+type: docker
+name: default
+steps:
+  - name: build
+    image: golang:1.13
+    commands:
+      - "go build -o ./myapp"
 
-    
+
 # kind: pipeline
 # type: docker
 # name: default
