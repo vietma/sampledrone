@@ -1,21 +1,27 @@
 ---
-kind: pipeline
-type: docker
-name: default
-steps:
-  - name: build
-    image: node:alpine
-    commands:
-      - npm install
-      - npm run build
-      - echo $DRONE_COMMIT > version.txt
-  - name: unit tests
-    image: node:alpine
-    commands:
-       - npm run test
-trigger:
-   branch:
-     - master
+- name: build
+  image: golang:1.13
+  commands:
+    - "go build -o ./myapp"
+
+    
+# kind: pipeline
+# type: docker
+# name: default
+# steps:
+#   - name: build
+#     image: node:alpine
+#     commands:
+#       - npm install
+#       - npm run build
+#       - echo $DRONE_COMMIT > version.txt
+#   - name: unit tests
+#     image: node:alpine
+#     commands:
+#        - npm run test
+# trigger:
+#    branch:
+#      - master
 
 # kind: pipeline
 # type: docker
