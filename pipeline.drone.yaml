@@ -13,5 +13,6 @@ steps:
   - name: frontend
     image: node
     commands:
-      - npm install
-      - npm run test
+      - node –version
+      # - npm install
+      # - npm run test
