@@ -8,10 +8,10 @@ steps:
     image: golang
     commands:
       - go build
-      - go test
+      # - go test
 
-  - name: frontend
-    image: node
-    commands:
-      - npm install
-      - npm run test
+  # - name: frontend
+  #   image: node
+  #   commands:
+  #     - npm install
+  #     - npm run test
