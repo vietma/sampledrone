@@ -8,7 +8,7 @@ steps:
     image: golang
     commands:
       - go build
-      # - go test
+      - go test
 
   # - name: frontend
   #   image: node
