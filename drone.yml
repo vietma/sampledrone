@@ -14,4 +14,4 @@ steps:
     image: node
     commands:
       - npm install
-      - npm run
+      - npm run test
