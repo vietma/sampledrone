@@ -8,6 +8,17 @@ steps:
     commands:
       - "go build -o ./myapp"
 
+  - name: publish
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      repo: vietma/sampledrone
+      auto_tag: true
+      auto_tag_suffix: drone-build
+
 
 # kind: pipeline
 # type: docker
