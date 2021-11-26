@@ -19,7 +19,6 @@ steps:
       auto_tag: true
       auto_tag_suffix: drone-build
 
-
 # kind: pipeline
 # type: docker
 # name: default
